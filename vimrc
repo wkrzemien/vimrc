@@ -9,7 +9,7 @@ let mapleader = ","
 "call pathogen#infect()
 "call pathogen#helptags()
 
-":PlugInstall 
+":PlugInstall
 ":PlugUpdate
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/a.vim'
@@ -23,14 +23,14 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'vim-scripts/tlib'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-
+Plug 'majutsushi/tagbar'
 Plug 'Rip-Rip/clang_complete'
 Plug 'davidhalter/jedi-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
 "I have some problem with the newest version from github
 "So i keep this one
-Plug '~/.vim/pluggedManually/syntastic' 
+Plug '~/.vim/pluggedManually/syntastic'
 call plug#end()
 
 
@@ -70,12 +70,12 @@ set foldmethod=syntax
 set foldenable
 set foldlevel=100
 "comments will not be folded
-let c_no_comment_fold = 1 
+let c_no_comment_fold = 1
 
 "open fixed window after make only in case of compilation errors
 autocmd QuickFixCmdPost * :cwindow
 
-"********** Custom remapping: ********** 
+"********** Custom remapping: **********
 "jumping around brackets with tab instead of %
 nnoremap <tab> %
 vnoremap <tab> %
@@ -89,13 +89,13 @@ nnoremap <leader>w <C-w>v<C-w>l
 "mapping ctrl+s as exit
 :nmap <c-s> :w<CR>
 
-"<F3> style formater 
-"<F4> cppcheck or pylint 
+"<F3> style formater
+"<F4> cppcheck or pylint
 map <F5> <Esc>:setlocal spell spelllang=es<CR>
 map <F6> <Esc>:setlocal spell spelllang=en_gb<CR>
 map <F7> <Esc>:setlocal nospell<CR>
 " turns on/off Graphic undo view
-nnoremap <F8> :GundoToggle<CR> 
+nnoremap <F8> :GundoToggle<CR>
 "<F9> execute or compile the program
 
 "ctags
@@ -133,7 +133,7 @@ augroup disablingTouchPad
 augroup END
 
 "remapping CapsLock to Escape, xmodmap must be available
-augroup RemappingCapsLockToEsc 
+augroup RemappingCapsLockToEsc
   autocmd!
   au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
   au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
@@ -169,7 +169,7 @@ nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 nnoremap <leader>0 10gt
 
-"navigating between buffers 
+"navigating between buffers
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
