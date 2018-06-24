@@ -1,12 +1,39 @@
 "non compatibility with vi
 set nocompatible
-call pathogen#infect()
-call pathogen#helptags()
 
 filetype plugin on
 syntax on
 
 let mapleader = ","
+
+"call pathogen#infect()
+"call pathogen#helptags()
+
+":PlugInstall 
+":PlugUpdate
+call plug#begin('~/.vim/plugged')
+Plug 'vim-scripts/a.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tell-k/vim-autopep8'
+Plug 'vim-airline/vim-airline'
+Plug 'parnmatt/vim-root'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'vim-scripts/tlib'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+Plug 'Rip-Rip/clang_complete'
+Plug 'davidhalter/jedi-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
+"I have some problem with the newest version from github
+"So i keep this one
+Plug '~/.vim/pluggedManually/syntastic' 
+call plug#end()
+
+
 
 set expandtab
 set shiftwidth=2
