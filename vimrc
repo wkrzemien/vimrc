@@ -126,11 +126,11 @@ set mouse=a
 "to turn off the touchpad while entering the vim
 "I use 13 cause it is the current setting
 "change xinput list for that number
-augroup disablingTouchPad
-  autocmd!
-  autocmd VimEnter * execute "!xinput -disable 12" | redraw!
-  autocmd VimLeave * execute "!xinput -enable 12" | redraw!
-augroup END
+"augroup disablingTouchPad
+"  autocmd!
+"  autocmd VimEnter * execute "!xinput -disable 12" | redraw!
+"  autocmd VimLeave * execute "!xinput -enable 12" | redraw!
+"augroup END
 
 "remapping CapsLock to Escape, xmodmap must be available
 augroup RemappingCapsLockToEsc
