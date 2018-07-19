@@ -27,6 +27,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Rip-Rip/clang_complete'
 Plug 'davidhalter/jedi-vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'lyuts/vim-rtags'
 
 "I have some problem with the newest version from github
 "So i keep this one
@@ -184,3 +185,7 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+
+"map <C-I> :pyf /home/krzemien/programs/clang-format/clang-format.py<cr>
+"imap <C-I> <c-o>:pyf /home/krzemien/programs/clang-format/clang-format.py<cr>
