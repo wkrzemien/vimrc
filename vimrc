@@ -6,9 +6,6 @@ syntax on
 
 let mapleader = ","
 
-"call pathogen#infect()
-"call pathogen#helptags()
-
 ":PlugInstall
 ":PlugUpdate
 call plug#begin('~/.vim/plugged')
@@ -33,8 +30,6 @@ Plug 'lyuts/vim-rtags'
 "So i keep this one
 Plug '~/.vim/pluggedManually/syntastic'
 call plug#end()
-
-
 
 set expandtab
 set shiftwidth=2
@@ -97,13 +92,6 @@ map <F6> <Esc>:setlocal spell spelllang=en_gb<CR>
 map <F7> <Esc>:setlocal nospell<CR>
 " turns on/off Graphic undo view
 nnoremap <F8> :GundoToggle<CR>
-"<F9> execute or compile the program
-
-"ctags
-"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-noremap <F11> :CommandTFlush<CR>
 map <F12> :TagbarToggle<CR>
 
 "to set/unset relative numbering of lines
@@ -139,7 +127,6 @@ augroup RemappingCapsLockToEsc
   au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
   au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 augroup END
-
 
 "====[ Make the 81st column stand out ]====================
 highlight ColorColumn ctermbg=magenta
